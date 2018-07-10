@@ -1,0 +1,4 @@
+Update traffic pukul *09:20 WIB* :
+*SG9500-gin* (7 links) : *24.7 Gbps* ,
+*SG9500-klm* (10 links) : *58.8 Gbps* ,
+Status Monitoring
