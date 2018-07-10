@@ -1,7 +1,7 @@
 # WA-BOT
 requirements:
 
-- install python 3.6.5
+- install python > 3.6.5
 
 upgrade last pip :
 - open CMD/PowerShell run as administrator (root)
