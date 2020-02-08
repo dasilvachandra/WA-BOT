@@ -14,7 +14,7 @@ def send_to_clipboard(clip_type, data):
     win32clipboard.CloseClipboard()
 
 def copy_file(filepath):
-	#filepath = 'capture\\capture.png'
+	#filepath = 'capture\\image.png'
 	image = Image.open(filepath)
 	output = BytesIO()
 	image.convert("RGB").save(output, "BMP")
@@ -26,20 +26,20 @@ driver=webdriver.Chrome("chromedriver.exe")
 driver.get('https://web.whatsapp.com')
 input('Enter anything after scanning QR code')
 
-file_name = "capture\\traffic.txt"
+file_name = "attach\\caption.txt"
 pesan = []
 
 
 def kirim(pesan):
-	kontak_name = "PCEF ALLOT"
+	kontak_name = "....Your Whatsapp Contact Name...."
 	user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(kontak_name))
 	user.click()
 	if len(pesan)>0: # kalo pesan kosong ya ga kirim
 		copy_file('capture\\capture.png')
-		msg_box = driver.find_element_by_class_name('_2WovP')
+		msg_box = driver.find_element_by_class_name('_3u328')
 		msg_box.send_keys("{}".format(Keys.CONTROL + "v"))
 		time.sleep(3)
-		msg_box = driver.find_element_by_class_name('_2S1VP')
+		msg_box = driver.find_element_by_class_name('_3FeAD')
 		for i in range(0,len(pesan)): #looping sesuai jumlah pesan
 			if i < len(pesan)-1:
 				print(pesan[i] + " shift enter")
